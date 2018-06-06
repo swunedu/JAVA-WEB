@@ -18,9 +18,17 @@
         <servlet-name>ThreeParameters</servlet-name>
         <servlet-class>ThreeParameters</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>ThreeParameters</servlet-name>
-        <url-pattern>/servlet/ThreeParameters</url-pattern>
+        <url-pattern>/ThreeParameters</url-pattern>
+    </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>ShowRs</servlet-name>
+        <servlet-class>ShowRs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowRs</servlet-name>
+        <url-pattern>/ShowRs</url-pattern>
     </servlet-mapping>
 </web-app>
