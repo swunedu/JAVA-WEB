@@ -31,4 +31,13 @@
         <servlet-name>ShowRs</servlet-name>
         <url-pattern>/ShowRs</url-pattern>
     </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>ShowRsUseBean</servlet-name>
+        <servlet-class>ShowRsUseBean</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowRsUseBean</servlet-name>
+        <url-pattern>/ShowRsUseBean</url-pattern>
+    </servlet-mapping>
 </web-app>
