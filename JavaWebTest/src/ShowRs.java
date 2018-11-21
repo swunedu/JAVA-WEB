@@ -26,16 +26,19 @@ public class ShowRs extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		
 		out.println("<table border=1>");
-		out.println("<tr><td>Content:</td></tr>");
+		out.println("<tr>"
+				+ "<td>Name</td>"
+				+ "<td>Value</td></tr>");
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/mydata?user=root&password=150604tt&serverTimezone=GMT%2B8&useSSL=false");//&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=150604tt&serverTimezone=GMT%2B8&useSSL=false");//&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false");
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("select * from article");
+			rs = stmt.executeQuery("select * from table_1");
 			while(rs.next()) {
 				out.println("<tr>");
-				out.println("<td>"+rs.getString("title")+"</td>");
+				out.println("<td>"+rs.getString("Name")+"</td>");
+				out.println("<td>"+rs.getString("Value")+"</td>");
 				out.println("</tr>");
 			}
 			out.println("</table>");

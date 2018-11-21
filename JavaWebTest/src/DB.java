@@ -6,7 +6,7 @@ public class DB {
 		Connection conn = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/mydata?user=root&password=150604tt&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=150604tt&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true");
 		} catch (ClassNotFoundException e){
 			e.printStackTrace();
 		} catch (SQLException e){
