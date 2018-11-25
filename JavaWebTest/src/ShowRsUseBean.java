@@ -25,12 +25,12 @@ public class ShowRsUseBean extends HttpServlet {
 		
 		Connection conn = DB.getConn();
 		java.sql.Statement stmt = DB.getStatement(conn);
-		String sql = "select * from article";
+		String sql = "select * from table_1";
 		ResultSet rs = DB.getResultSet(stmt, sql);
 		try {
 			while(rs.next()) {
 				out.println("<tr>");
-				out.println("<td>"+rs.getString("title")+"</td>");
+				out.println("<td>"+rs.getString("Name")+"</td>" + "<td>"+rs.getString("Value")+"</td>");
 				out.println("</tr>");
 			}
 			out.println("</table>");
